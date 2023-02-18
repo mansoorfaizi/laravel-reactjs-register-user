@@ -1,9 +1,10 @@
-import React from 'react'
+
 
 const NotFound = () => {
-  return (
-    <div>۴۰۴ صفحه یافت نشد</div>
-  )
-}
 
-export default NotFound
+  return (
+        <img src="http://localhost:3000/src/assets/404.svg" alt="" />
+  );
+};
+
+export default NotFound;
