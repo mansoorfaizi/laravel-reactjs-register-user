@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\SignupRequest;
+use App\Models\User;
+use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -27,7 +32,7 @@ class AuthController extends Controller
         if (!Auth::attempt($credentials)) {
             return response([
                 'message' => 'Provided email or password is incorrect'
-            ], 422);
+            ]);
         }
 
         /** @var \App\Models\User $user */
