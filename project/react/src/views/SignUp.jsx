@@ -23,7 +23,7 @@ const SignUp = () => {
     }
 
     console.log(payload)
-    axiosClient.post('/signup', payload)
+    axiosClient.post('/signup', payload) 
       .then(({data}) => {
         setUser(data.user)
         setToken(data.token);
@@ -38,25 +38,26 @@ const SignUp = () => {
   }
 
   return (
-    
+    <div className="login-signup-form animated fadeInDown">
+      <div className="form">
         <form onSubmit={onSubmit}>
-          <h1 className='title'>Signup for free</h1>
-          {
-            errors && <div className='alert'>
+          <h1 className="title">ایجاد حساب</h1>
+          {errors &&
+            <div className="alert">
               {Object.keys(errors).map(key => (
-                <p key={key}>{errors[key]}</p>
+                <p key={key}>{errors[key][0]}</p>
               ))}
             </div>
           }
-          <input ref={nameRef} type="text" placeholder='Full Name' />
-          <input ref={emailRef} type="email" placeholder='Email Address' />
-          <input ref={passwordRef} type="password" placeholder='password' />
-          <input ref={passwordConfirmationRef} type="password" placeholder='password confirmation' />
-          <button className='btn btn-block'>Signup</button>
-          <p className='message'>
-            Already Registered? <Link to={"/login"}>Sign in</Link>
-          </p>
+          <input ref={nameRef} type="text" placeholder="نام کامل"/>
+          <input ref={emailRef} type="email" placeholder="ایمیل آدرس"/>
+          <input ref={passwordRef} type="password" placeholder="گذرواٰژه"/>
+          <input ref={passwordConfirmationRef} type="password" placeholder="تکرار گذروازه"/>
+          <button className="btn btn-block">ایجاد</button>
+          <p className="message">حساب دارید ؟<Link to="/login">ورود به حساب</Link></p>
         </form>
+      </div>
+    </div>
       
   )
 }

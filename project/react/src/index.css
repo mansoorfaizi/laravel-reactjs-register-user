@@ -133,7 +133,7 @@ table > tbody > tr > td {
     bottom: 1rem;
     z-index: 100;
     padding: 1rem 1.5rem;
-    background-color: #00a762;
+    background-color: #00a771;
     color: white;
     border-radius: 0.5rem;
 }
@@ -184,7 +184,7 @@ table > tbody > tr > td {
 
 #defaultLayout aside {
     width: 240px;
-    background-color: #5b08a7;
+    background-color: #9e08b7;
     padding: 1rem
 }
 

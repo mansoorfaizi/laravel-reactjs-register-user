@@ -3,18 +3,17 @@ import { Navigate, Outlet } from 'react-router-dom'
 import { useStateContext } from '../context/ContextProvider';
 
 const GuestLayout = () => {
-  const {token} = useStateContext();
+  const { user, token } = useStateContext();
 
-  if (token){
-      return <Navigate to="/" />
+  if (token) {
+    return <Navigate to="/" />;
   }
+
   return (
-    <div className="login-signup-form animated fadeInDown">
-      <div className='form'>
-        <Outlet />
-      </div>
+    <div id="guestLayout">
+      <Outlet />
     </div>
-  )
+  );
 }
 
 export default GuestLayout
