@@ -31,7 +31,7 @@ These instructions will help you set up and run the LaraPulse Register project o
 2. Navigate to the project directory:
 
     ```bash
-    cd LaraPulse-Register
+    cd laravel-reactjs-register-user
     ```
 
 3. Install dependencies:
